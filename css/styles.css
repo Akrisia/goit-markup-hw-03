@@ -1,0 +1,218 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-bg-color: #fff;
+  --footer-bg-color: #2f303a;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --logo-studio-header-color: #000;
+  --secondary-bg-color: #f5f4fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+/* общие особенности */
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+/* логотип */
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+
+.header-studio {
+  color: var(--logo-studio-header-color);
+}
+
+.footer-studio {
+  color: var(--primary-bg-color);
+}
+
+/* навигация сайта и контакты в шапке */
+
+.site-nav-link,
+.contact-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav-link {
+  color: var(--title-text-color);
+}
+
+.site-nav-link.current {
+  color: var(--accent-color);
+}
+
+.contact-link {
+  color: var(--primary-text-color);
+}
+
+/* главная страница */
+/* герой */
+
+.hero {
+  background-color: var(--footer-bg-color);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--primary-bg-color);
+}
+
+.hero-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+
+  cursor: pointer;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-bg-color);
+}
+
+/* общее в секциях */
+
+.section-title,
+.feature-title,
+.member-title {
+  color: var(--title-text-color);
+}
+
+.section-title,
+.member-title,
+.member-desc {
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+/* секция - особенности */
+
+.feature-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.feature-desc {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* секция - работа */
+
+/* секция - команда*/
+
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.member-title,
+.member-desc {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.member-title {
+  font-weight: 500;
+}
+
+/* страница - портфолио */
+
+.filter-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
+
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--title-text-color);
+}
+
+.project-desc {
+  font-size: 16px;
+  line-height: 1.87;
+
+  color: var(--primary-text-color);
+}
+
+/* подвал сайта */
+
+footer {
+  background-color: var(--footer-bg-color);
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address-map {
+  color: var(--primary-bg-color);
+}
+
+.address-link {
+  color: var(--footer-contacts-color);
+}
