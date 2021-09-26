@@ -8,8 +8,10 @@
   --logo-studio-header-color: #000;
   --secondary-bg-color: #f5f4fa;
   --border-color: #ececec;
+  --border-portfolio: #eeeeee;
   --main-margin: 30px;
   --secondary-margin: 50px;
+  --portfolio-address-margin: 20px;
   --small-margin: 10px;
 }
 
@@ -306,7 +308,20 @@ ul {
 
 /* страница - портфолио */
 
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-item:not(:first-child) {
+  margin-left: 8px;
+}
+
 .filter-btn {
+  padding: 6px 22px;
+  margin-bottom: var(--secondary-margin);
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -315,6 +330,8 @@ ul {
 
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
+  border-color: transparent;
+  border-radius: 4px;
 
   cursor: pointer;
 }
@@ -325,7 +342,29 @@ ul {
   background-color: var(--accent-color);
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--main-margin));
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - var(--main-margin));
+  margin-top: var(--main-margin);
+  margin-left: var(--main-margin);
+
+  border: 1px solid var(--border-portfolio);
+}
+
+.project-content {
+  padding: 20px 24px;
+}
+
 .project-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -353,7 +392,7 @@ footer {
 }
 
 .address {
-  margin-top: 20px;
+  margin-top: var(--portfolio-address-margin);
   margin-bottom: -9px;
 
   font-style: normal;
