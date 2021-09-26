@@ -162,6 +162,12 @@ ul {
   padding-bottom: 200px;
 }
 
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-title {
   margin: 0 auto;
 
@@ -177,11 +183,6 @@ ul {
 }
 
 .hero-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.btn-text {
   width: 200px;
   height: var(--secondary-margin);
   margin-top: var(--main-margin);
