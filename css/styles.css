@@ -7,6 +7,10 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --logo-studio-header-color: #000;
   --secondary-bg-color: #f5f4fa;
+  --border-color: #ececec;
+  --main-margin: 30px;
+  --secondary-margin: 50px;
+  --small-margin: 10px;
 }
 
 body {
@@ -16,7 +20,39 @@ body {
   background-color: var(--primary-bg-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
 /* общие особенности */
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .list {
   list-style: none;
@@ -29,6 +65,28 @@ body {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* шапка */
+
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 /* логотип */
@@ -51,8 +109,29 @@ body {
 
 /* навигация сайта и контакты в шапке */
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.site-nav-item:not(:last-child),
+.contact-item:not(:last-child) {
+  margin-right: var(--secondary-margin);
+}
+
 .site-nav-link,
 .contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -76,20 +155,35 @@ body {
 
 .hero {
   background-color: var(--footer-bg-color);
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
+  margin: 0 auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  max-width: 696px;
 
   color: var(--primary-bg-color);
 }
 
 .hero-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-text {
+  width: 200px;
+  height: var(--secondary-margin);
+  margin-top: var(--main-margin);
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -98,6 +192,9 @@ body {
 
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 
   cursor: pointer;
 }
@@ -123,6 +220,8 @@ body {
 }
 
 .section-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -130,7 +229,24 @@ body {
 
 /* секция - особенности */
 
+.features-section {
+  padding-bottom: 0px;
+}
+
+.features {
+  display: flex;
+  align-items: space-between;
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.feature-item {
+  flex-basis: calc(100% / 4 - var(--main-margin));
+  margin-left: var(--main-margin);
+}
+
 .feature-title {
+  margin-bottom: var(--small-margin);
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -144,10 +260,37 @@ body {
 
 /* секция - работа */
 
+.works {
+  display: flex;
+  align-items: space-between;
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.work-item {
+  flex-basis: calc(100% / 3 - var(--main-margin));
+  margin-left: var(--main-margin);
+}
+
 /* секция - команда*/
 
 .team {
   background-color: var(--secondary-bg-color);
+}
+
+.members {
+  display: flex;
+  align-items: space-between;
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.member-item {
+  flex-basis: calc(100% / 4 - var(--main-margin));
+  margin-left: var(--main-margin);
+  padding-bottom: var(--main-margin);
+}
+
+.member-image {
+  margin-bottom: var(--main-margin);
 }
 
 .member-title,
@@ -157,6 +300,7 @@ body {
 }
 
 .member-title {
+  margin-bottom: var(--small-margin);
   font-weight: 500;
 }
 
@@ -203,16 +347,28 @@ footer {
   background-color: var(--footer-bg-color);
 }
 
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .address {
+  margin-top: 20px;
+  margin-bottom: -9px;
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
 
 .address-map {
+  margin-bottom: 9px;
+
   color: var(--primary-bg-color);
 }
 
 .address-link {
+  margin-bottom: 9px;
+
   color: var(--footer-contacts-color);
 }
