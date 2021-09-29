@@ -41,6 +41,7 @@ h6 {
 ul {
   margin: 0;
   padding-left: 0;
+  list-style: none;
 }
 
 /* общие особенности */
@@ -54,10 +55,6 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.list {
-  list-style: none;
 }
 
 .link {
@@ -111,10 +108,13 @@ ul {
 
 /* навигация сайта и контакты в шапке */
 
+.navigation {
+  margin-left: 93px;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
-  margin-left: 93px;
 }
 
 .contacts {
@@ -238,7 +238,6 @@ ul {
 
 .features {
   display: flex;
-  align-items: space-between;
   margin-left: calc(-1 * var(--main-margin));
 }
 
@@ -265,7 +264,6 @@ ul {
 
 .works {
   display: flex;
-  align-items: space-between;
   margin-left: calc(-1 * var(--main-margin));
 }
 
@@ -282,18 +280,19 @@ ul {
 
 .members {
   display: flex;
-  align-items: space-between;
   margin-left: calc(-1 * var(--main-margin));
 }
 
 .member-item {
   flex-basis: calc(100% / 4 - var(--main-margin));
   margin-left: var(--main-margin);
-  padding-bottom: var(--main-margin);
+
+  background-color: var(--primary-bg-color);
 }
 
-.member-image {
-  margin-bottom: var(--main-margin);
+.member-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .member-title,
@@ -313,6 +312,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--secondary-margin);
 }
 
 .filter-item:not(:first-child) {
@@ -321,7 +321,6 @@ ul {
 
 .filter-btn {
   padding: 6px 22px;
-  margin-bottom: var(--secondary-margin);
 
   font-family: inherit;
   font-weight: 500;
@@ -385,16 +384,17 @@ ul {
 /* подвал сайта */
 
 footer {
-  background-color: var(--footer-bg-color);
-}
-
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--footer-bg-color);
 }
 
 .address {
   margin-top: var(--portfolio-address-margin);
+}
+
+.address-list {
   margin-bottom: -9px;
 
   font-style: normal;
@@ -402,14 +402,14 @@ footer {
   line-height: 1.71;
 }
 
-.address-map {
+.address-item {
   margin-bottom: 9px;
+}
 
+.address-map {
   color: var(--primary-bg-color);
 }
 
 .address-link {
-  margin-bottom: 9px;
-
   color: var(--footer-contacts-color);
 }
